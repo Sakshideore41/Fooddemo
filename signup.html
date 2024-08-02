@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Signup</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('o.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .upper-right-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .upper-right-buttons a {
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: #a85bdb; /* Change this to your desired color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .logo {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav {
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+        .container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container form label,
+        .container form input {
+            width: 80%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .container form button {
+            padding: 10px 20px;
+            background-color: #a85bdb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .container form button:hover {
+            background-color: #8a4fb1;
+        }
+        .footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .social-links a img,
+        .app-links a img {
+            width: 30px;
+            margin: 0 5px;
+        }
+        .footer-bottom {
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .button-container button {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            margin: 0 10px;
+            background-color: #a85bdb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-container button:hover {
+            background-color: #8a4fb1;
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            const username = document.getElementById('newUsername').value;
+            const password = document.getElementById('newPassword').value;
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (username.length < 4) {
+                alert('Username must be at least 4 characters long.');
+                return;
+            }
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return;
+            }
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            alert('Form submitted successfully!');
+            window.location.href = 'after-login.html'; // Redirect to bookings page after successful validation
+        }
+    </script>
+</head>
+<body>
+    <div class="logo">
+        <img src="D:\Websites of Food\logos\cheflogo.jpg" alt="Zomato Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="About.html">About</a></li>
+            <li><a href="whatonyourmind.html">What's on your mind?</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="whatweoffer.html">Offers</a></li>
+            <li><a href="enquiryform.html">Enquiry</a></li>
+            <li><a href="signupage.html">Sign In</a></li>
+            <li><a href="Googlemap.html">Googlemap</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Food Paradise Signup</h2>
+        <form id="signupForm" onsubmit="validateForm(event)">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p><a href="loginpage.html">Already have an account? Login</a></p>
+    </div>
+    <div class="button-container">
+        <button onclick="window.location.href='after-login.html';">Booking</button>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>ABOUT ZOMATO</h4>
+                <ul>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Work With Us</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Report Fraud</a></li>
+                    <li><a href="#">Press Kit</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>ZOMAVERSE</h4>
+                <ul>
+                    <li><a href="#">Zomato</a></li>
+                    <li><a href="#">Blinkit</a></li>
+                    <li><a href="#">Feeding India</a></li>
+                    <li><a href="#">Hyperpure</a></li>
+                    <li><a href="#">Zomaland</a></li>
+                    <li><a href="#">Weather Union</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>FOR RESTAURANTS</h4>
+                <ul>
+                    <li><a href="#">Partner With Us</a></li>
+                    <li><a href="#">Apps For You</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>LEARN MORE</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>SOCIAL LINKS</h4>
+                <div class="social-links">
+                    <a href="#"><img src="D:\Websites of Food\logos\linkdin.jpg" alt="LinkedIn"></a>
+                    <a href="#"><img src="D:\Websites of Food\logos\instagram.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="D:\Websites of Food\logos\twitter.jpg" alt="Twitter"></a>
+                    <a href="#"><img src="D:\Websites of Food\logos\youtube.jpg" alt="YouTube"></a>
+                </div>
+                <div class="app-links">
+                    <a href="#"><img src="D:\Websites of Food\logos\appstore.jpg" alt="App Store"></a>
+                    <a href="#"><img src="D:\Websites of Food\logos\playstore.jpg" alt="Google Play"></a>
+                </div>
+            </div>
+        </div> 
+        <div class="footer-bottom">
+            <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. &copy; 2024 Zomato™ Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
