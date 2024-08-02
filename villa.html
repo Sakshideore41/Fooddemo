@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        #property-types, #trending-destinations {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .box {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 18%;
+            text-align: center;
+        }
+        .box img {
+            max-width: 100%;
+            height: auto;
+        }
+        .box h3 {
+            margin-top: 10px;
+        }
+        #featured-apartments {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        #featured-apartments h2 {
+            margin-top: 0;
+        }
+        .apartment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .apartment img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .apartment-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .apartment-price {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="property">
+            <img src=" Courtyard.villa.jpg" alt="The Courtyard Gites en Charente">
+            <h2>The Courtyard Gites en Charente Charmant Avec Piscine et WIFI Parfait en Famille ou En Couple</h2>
+            <p>Rouillac - <a href="#">Show on map</a> - 4.1 km from centre</p>
+            <p>Offering a heated outdoor swimming pool and a children's playground, The Courtyard Gites en Charente Charmant Avec Piscine et WIFI Parfait en Famille ou En Couple is located 4.5 km from Rouillac.</p>
+            <p class="rating">Exceptional 9.7 (6 reviews) - Location 10</p>
+            <button>Show prices</button>
+        </div>
+        <div class="property">
+            <img src="Gites_villa.jpg" alt="Gites Le Cheval Noir">
+            <h2>Gites Le Cheval Noir</h2>
+            <p>Rouillac - <a href="#">Show on map</a> - 8.5 km from centre</p>
+            <p>Set in Rouillac and only 32 km from Cognac Golf Course, Gites Le Cheval Noir offers accommodation with garden views, free WiFi, and free private parking.</p>
+            <p class="rating">Very good 8.2 (26 reviews)</p>
+            <button>Show prices</button>
+        </div>
+    </div>
+    <section id="filter-by">
+        <h2>Filter by:</h2>
+        <div class="filter-option">
+            <h3>Star Rating</h3>
+            <label><input type="checkbox" name="star" value="5"> 5 stars</label><br>
+            <label><input type="checkbox" name="star" value="4"> 4 stars</label><br>
+            <label><input type="checkbox" name="star" value="3"> 3 stars</label><br>
+            <label><input type="checkbox" name="star" value="2"> 2 stars</label><br>
+            <label><input type="checkbox" name="star" value="1"> 1 star</label>
+        </div>
+        <div class="filter-option">
+            <h3>Review Score</h3>
+            <label><input type="checkbox" name="review" value="9"> Superb: 9+</label><br>
+            <label><input type="checkbox" name="review" value="8"> Very good: 8+</label><br>
+            <label><input type="checkbox" name="review" value="7"> Good: 7+</label><br>
+            <label><input type="checkbox" name="review" value="6"> Pleasant: 6+</label>
+        </div>
+    </section>
+</body>
+</html>

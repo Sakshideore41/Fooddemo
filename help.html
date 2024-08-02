@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Section</title>
+    <style>
+        /* General styles for the help section */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .tab-content {
+            background-image: url('f.jpg'); /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            padding: 200px;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 200%;
+        }
+
+        .tab-content h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Accordion styles */
+        .accordion {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            transition: 0.4s;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .accordion:hover {
+            background-color: #555;
+        }
+
+        .panel {
+            padding: 0 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .panel p {
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin: 0;
+        }
+
+        /* Contact form styles */
+        #helpForm {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        #helpForm h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        #helpForm input,
+        #helpForm textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 1em;
+            color: #333;
+        }
+
+        #helpForm button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #helpForm button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="Help" class="tab-content">
+        <h2>Help</h2>
+        <button class="accordion">What is your refund policy?</button>
+        <div class="panel">
+            <p>We offer a full refund if cancellations are made 48 hours prior to the booking date.</p>
+        </div>
+        <button class="accordion">How can I modify my booking?</button>
+        <div class="panel">
+            <p>You can modify your booking by contacting us via email or phone.</p>
+        </div>
+        <button class="accordion">Do you offer any discounts?</button>
+        <div class="panel">
+            <p>We offer seasonal discounts. Subscribe to our newsletter for updates.</p>
+        </div>
+        <button class="accordion">Food Items</button>
+        <div class="panel">
+            <p>Here you can find help related to food items, like allergens information and ingredients.</p>
+        </div>
+        <button class="accordion">Cart Issues</button>
+        <div class="panel">
+            <p>If you are experiencing issues with your cart, such as items not appearing or incorrect totals, please reach out to our support team.</p>
+        </div>
+        <button class="accordion">Payment Issues</button>
+        <div class="panel">
+            <p>For any problems related to payments, including failed transactions or double charges, please contact our billing support.</p>
+        </div>
+        <button class="accordion">Enquiry Issues</button>
+        <div class="panel">
+            <p>If you have any enquiries or questions, you can reach out to us through the contact form below.</p>
+        </div>
+        <button class="accordion">Booking Trips</button>
+        <div class="panel">
+            <p>Information on how to book trips, modify bookings, and cancel trips.</p>
+        </div>
+        <button class="accordion">Table Issues</button>
+        <div class="panel">
+            <p>Help related to booking tables, modifying reservations, and cancellation policies.</p>
+        </div>
+        <form id="helpForm">
+            <h3>Contact Us</h3>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var acc = document.getElementsByClassName('accordion');
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + 'px';
+                    }
+                });
+            }
+
+            document.getElementById('helpForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Message sent! We will get back to you soon.');
+            });
+        });
+    </script>
+</body>
+</html>

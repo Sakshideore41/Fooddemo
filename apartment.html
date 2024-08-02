@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        #property-types, #trending-destinations {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .box {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 18%;
+            text-align: center;
+        }
+        .box img {
+            max-width: 100%;
+            height: auto;
+        }
+        .box h3 {
+            margin-top: 10px;
+        }
+        #featured-apartments {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        #featured-apartments h2 {
+            margin-top: 0;
+        }
+        .apartment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .apartment img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .apartment-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .apartment-price {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Apartment Booking</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="trending-destinations">
+            <div class="box">
+                <img src="dubai.jpg" alt="Dubai">
+                <h3>Dubai, UAE</h3>
+                <p>13078 apartments</p>
+            </div>
+            <div class="box">
+                <img src="paris.jpg" alt="Paris">
+                <h3>Paris, France</h3>
+                <p>12511 apartments</p>
+            </div>
+            <div class="box">
+                <img src="london.jpg" alt="London">
+                <h3>London, UK</h3>
+                <p>11000 apartments</p>
+            </div>
+            <div class="box">
+                <img src="rome.jpg" alt="Rome">
+                <h3>Rome, Italy</h3>
+                <p>10161 apartments</p>
+            </div>
+            <div class="box">
+                <img src="athens.jpg" alt="Athens">
+                <h3>Athens, Greece</h3>
+                <p>8570 apartments</p>
+            </div>
+        </section>
+
+        <section id="featured-apartments">
+            <h2>We love these apartments in Myrtle Beach</h2>
+            <div class="apartment">
+                <img src="apartment1.jpg" alt="Apartment 1">
+                <div class="apartment-info">
+                    <h3>Beautiful Beachfront Apartment</h3>
+                    <p>2 bed, 2 bath, oceanfront, pool, slee ps 6</p>
+                </div>
+                <div class="apartment-price">$150 per night</div>
+            </div>
+            <div class="apartment">
+                <img src="apartment2.jpg" alt="Apartment 2">
+                <div class="apartment-info">
+                    <h3>Cozy Condo Near the Beach</h3>
+                    <p>1 bed, 1 bath, close to amenities, sleeps 4</p>
+                </div>
+                <div class="apartment-price">$120 per night</div>
+            </div>
+            <!-- Add more apartments as needed -->
+        </section>
+    </div>
+
+</body>
+</html>
