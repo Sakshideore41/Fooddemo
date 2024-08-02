@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('h.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(232, 248, 245, 0.7);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+/* Centered search bar styles */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#searchForm {
+    display: flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    width: 200px;
+}
+
+#searchInput::placeholder {
+    color: #aaa;
+}
+
+#searchForm button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#searchForm button:hover {
+    background-color: #45a049;
+}
+
+.food-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+.food-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(147, 102, 168, 0.993);
+    margin: 1rem;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+}
+
+.food-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.quantity-control button {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.add-to-cart {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.add-to-cart:hover, .quantity-control button:hover {
+    background-color: #ff4500;
+}
