@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Home</title>
+    <link rel="stylesheet" href="dem.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Zomato</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">What's on your mind?</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+                <button type="submit">Search</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="carousel">
+                <button class="carousel-button prev">&lt;</button>
+                <div class="carousel-container">
+                   
+                    
+                </div>
+                <button class="carousel-button next">&gt;</button>
+            </div>
+
+            <h2>Food Menu</h2>
+            <div class="horizontal-container">
+                <div class="food-item">
+                    <img src="D:\Websites of Food\image of web\chicken.jpg" alt="Food Item 1" width="200" height="300">
+                    <h3>Food Item 1</h3>
+                    <p>$10.00</p>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="D:\Websites of Food\image of web\fries.jpg" alt="Food Item 2" width="200" height="300">
+                    <h3>Food Item 2</h3>
+                    <p>$12.00</p>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="D:\Websites of Food\image of web\pizza.jpg" alt="Food Item 3" width="200" height="300">
+                    <h3>Food Item 3</h3>
+                    <p>$15.00</p>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="D:\Websites of Food\image of web\ham.jpg" alt="Food Item 2" width="200" height="300">
+                    <h3>Food Item 2</h3>
+                    <p>$12.00</p>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="D:\Websites of Food\image of web\pancake.jpg" alt="Food Item 2" width="200" height="300">
+                    <h3>Food Item 2</h3>
+                    <p>$12.00</p>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="food-item">
+                    <img src="D:\Websites of Food\image of web\rolls.jpg" alt="Food Item 2" width="200" height="300">
+                    <h3>Food Item 2</h3>
+                    <p>$12.00</p>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="count">0</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <h2>Featured Restaurants</h2>
+            <div class="horizontal-container">
+                <div class="restaurant-item">
+                    <img src="D:\Websites of Food\image of web\rest1.jpg" alt="Restaurant 1" width="200" height="300">
+                    <h3>Restaurant 1</h3>
+                </div>
+                <div class="restaurant-item">
+                    <img src="D:\Websites of Food\image of web\thali.jpg" alt="Restaurant 2" width="200" height="300">
+                    <h3>Restaurant 2</h3>
+                </div>
+                <div class="restaurant-item">
+                    <img src="D:\Websites of Food\image of web\rest3.jpg" alt="Restaurant 1" width="200" height="300">
+                    <h3>Restaurant 3</h3>
+                </div>
+                <div class="restaurant-item">
+                    <img src="D:\Websites of Food\image of web\cup.jpg" alt="Restaurant 1" width="200" height="300">
+                    <h3>Restaurant 4</h3>
+                </div>
+                <div class="restaurant-item">
+                    <img src="D:\Websites of Food\image of web\rest2.jpg" alt="Restaurant 1" width="200" height="300">
+                    <h3>Restaurant 5</h3>
+                </div>
+            </div>
+
+            <h2>Testimonials</h2>
+            <div class="horizontal-container">
+                <div class="testimonial-item">
+                    <p>"Great food and service!"</p>
+                    <p>- Customer 1</p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Loved the ambiance!"</p>
+                    <p>- Customer 2</p>
+                </div>
+            </div>
+
+            <h2>Find Us Here</h2>
+            <div class="map" id="map"></div>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4>ABOUT ZOMATO</h4>
+                    <ul>
+                        <li><a href="#">Who We Are</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Work With Us</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Report Fraud</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>ZOMAVERSE</h4>
+                    <ul>
+                        <li><a href="#">Zomato</a></li>
+                        <li><a href="#">Blinkit</a></li>
+                        <li><a href="#">Feeding India</a></li>
+                        <li><a href="#">Hyperpure</a></li>
+                        <li><a href="#">Zomaland</a></li>
+                        <li><a href="#">Weather Union</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>FOR RESTAURANTS</h4>
+                    <ul>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Apps For You</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>LEARN MORE</h4>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>SOCIAL LINKS</h4>
+                    <div class="social-links">
+                        <a href="#"><img src="D:\Websites of Food\logos\linkdin.jpg" alt="LinkedIn"></a>
+                        <a href="#"><img src="D:\Websites of Food\logos\instagram.jpg" alt="Instagram"></a>
+                        <a href="#"><img src="D:\Websites of Food\logos\twitter.jpg" alt="Twitter"></a>
+                        <a href="#"><img src="D:\Websites of Food\logos\youtube.jpg" alt="YouTube"></a>
+                    </div>
+                    <div class="app-links">
+                        <a href="#"><img src="D:\Websites of Food\logos\play store.jpg" alt="Play Store"></a>
+                        <a href="#"><img src="D:\Websites of Food\logos\ios.jpg" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        #property-types, #trending-destinations {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .box {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 23%;
+            text-align: center;
+        }
+        .box img {
+            max-width: 100%;
+            height: auto;
+        }
+        .box h3 {
+            margin-top: 10px;
+        }
+        #booking-form {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        #last-minute-deals {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        #last-minute-deals h2 {
+            margin-top: 0;
+        }
+        .hotel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .hotel img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .hotel-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .hotel-price {
+            font-weight: bold;
+        }
+        #calendar {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Hotel Booking</h1>
+        </div>
+    </header>
+
+        <section id="last-minute-deals">
+            <h2>Last Minute Hotels Near You</h2>
+            <div id="calendar">
+                <label for="checkin">Check-in:</label>
+                <input type="date" id="checkin" name="checkin">
+                <label for="checkout">Check-out:</label>
+                <input type="date" id="checkout" name="checkout">
+                <button>Search</button>
+            </div>
+            <div class="hotel">
+                <img src="hotel1.jpg" alt="Hotel 1">
+                <div class="hotel-info">
+                    <h3>Novotel New Delhi Aerocity - International Airport</h3>
+                    <p>Aerocity</p>
+                </div>
+                <div class="hotel-price">₹7,498</div>
+            </div>
+            <div class="hotel">
+                <img src="hotel2.jpg" alt="Hotel 2">
+                <div class="hotel-info">
+                    <h3>The Ashok, New Delhi</h3>
+                    <p>Chanakyapuri</p>
+                </div>
+                <div class="hotel-price">₹7,502.32</div>
+            </div>
+            <div class="hotel">
+                <img src="Pullman.jpg" alt="Hotel 2">
+                <div class="hotel-info">
+                    <h3>Pullman, New Delhi</h3>
+                    <p>Aerocity</p>
+                </div>
+                <div class="hotel-price">₹6,502.32</div>
+            </div>
+            <div class="hotel">
+                <img src="Radisson_Blu.jpg" alt="Hotel 2">
+                <div class="hotel-info">
+                    <h3>Radisson_Blu, New Delhi</h3>
+                    <p>Dwarka</p>
+                </div>
+                <div class="hotel-price">₹8,502.32</div>
+            </div>
+
+            <!-- Add more hotels as needed -->
+        </section>
+    </div>
+
+</body>
+</html>

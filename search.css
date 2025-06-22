@@ -1,0 +1,109 @@
+/* Reset default margins and paddings */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Centered search bar styles */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#searchForm {
+    display: flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    width: 300px;
+}
+
+#searchInput::placeholder {
+    color: #aaa;
+}
+
+#searchForm button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#searchForm button:hover {
+    background-color: #45a049;
+}
+
+/* Additional styles for the rest of the page */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .enquiry h2 {
+        font-size: 2.5em;
+    }
+
+    .enquiry form {
+        padding: 10px;
+    }
+}

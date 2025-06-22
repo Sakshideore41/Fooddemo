@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Trip or Table</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('b.jpg'); /* Make sure to replace 'background.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+        .container h1 {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .tabs button {
+            padding: 10px;
+            flex: 1;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        .tabs button:hover {
+            background-color: #0056b3;
+        }
+        .tabs button.active {
+            background-color: #0056b3;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input,
+        form select,
+        form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        .links {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .links a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .accordion {
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+        .accordion:hover,
+        .accordion.active {
+            background-color: #0056b3;
+            color: white;
+        }
+        .panel {
+            padding: 0 10px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Restoran</h1>
+        <div class="links">
+            <a href="home.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Menu</a>
+            <a href="#">Contact</a>
+            <a href="enquiryform.html">Enquiry</a>
+        </div>
+        
+        <div class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'Trip')">Book a Trip</button>
+            <button class="tablink" onclick="openTab(event, 'Table')">Book a Table</button>
+            <button class="tablink" onclick="openTab(event, 'Help')">Help</button>
+        </div>
+        
+        <div id="Trip" class="tab-content active">
+            <h2>Book a Trip</h2>
+            <form id="tripForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone" required>
+                <input type="date" name="checkin" required>
+                <input type="date" name="checkout" required>
+                <select name="roomtype" required>
+                    <option value="">Select Room Type</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select>
+                <textarea name="requests" placeholder="Special Requests"></textarea>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+
+        <div id="Table" class="tab-content">
+            <h2>Book a Table</h2>
+            <form id="tableForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone" required>
+                <input type="date" name="date" required>
+                <input type="time" name="time" required>
+                <select name="guests" required>
+                    <option value="">Number of Guests</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <textarea name="requests" placeholder="Special Requests"></textarea>
+                <button type="submit">Book Table</button>
+            </form>
+        </div>
+        
+        <div id="Help" class="tab-content">
+            <h2>Help</h2>
+            <button class="accordion">What is your refund policy?</button>
+            <div class="panel">
+                <p>We offer a full refund if cancellations are made 48 hours prior to the booking date.</p>
+            </div>
+            <button class="accordion">How can I modify my booking?</button>
+            <div class="panel">
+                <p>You can modify your booking by contacting us via email or phone.</p>
+            </div>
+            <button class="accordion">Do you offer any discounts?</button>
+            <div class="panel">
+                <p>We offer seasonal discounts. Subscribe to our newsletter for updates.</p>
+            </div>
+            <form id="helpForm">
+                <h3>Contact Us</h3>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        
+        <p>&copy; 2024 Restoran. All rights reserved.</p>
+    </div>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        document.getElementById('tripForm').addEventListener('submit', function(event) {
+            if (!validateForm(event.target)) {
+                event.preventDefault();
+            }
+        });
+
+        document.getElementById('tableForm').addEventListener('submit', function(event) {
+            if (!validateForm(event.target)) {
+                event.preventDefault();
+            }
+        });
+
+        document.getElementById('helpForm').addEventListener('submit', function(event) {
+            if (!validateForm(event.target)) {
+                event.preventDefault();
+            }
+        });
+
+        function validateForm(form) {
+            let valid = true;
+            const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+            inputs.forEach(input => {
+                if (!input.value) {
+                    valid = false;
+                    input.style.borderColor = 'red';
+                } else {
+                    input.style.borderColor = '#ccc';
+                }
+            });
+            return valid;
+        }
+
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

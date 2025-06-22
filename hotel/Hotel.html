@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #main-header {
+            background-color: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        #main-header h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 24px;
+        }
+        #property-types, #trending-destinations {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .box {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 23%;
+            text-align: center;
+        }
+        .box img {
+            max-width: 100%;
+        }
+        .box h3 {
+            margin-top: 10px;
+        }
+        #booking-form {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container">
+            <h1>Hotel Booking</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="property-types">
+            <div class="box">
+                <a href="Res.html"> Hotel</a>
+                <img src="hotel.jpg" alt="Hotel">
+                <h3>Hotels</h3>
+            </div>
+            <div class="box">
+                <a href="apartment.html">Apartments</a>
+                <img src="apartment.jpg" alt="Apartments">
+                <h3>Apartments</h3>
+            </div>
+            <div class="box">
+                <a href="#"></a>
+                <img src="resort.jpg" alt="Resorts">
+                <h3>Resorts</h3>
+            </div>
+            <div class="box">
+                <a href="#"></a>
+                <img src="villa.jpg" alt="Villas">
+                <h3>Villas</h3>
+            </div>
+        </section>
+
+        <section id="trending-destinations">
+            <div class="box">
+                <img src="newdelhi.jpg" alt="New Delhi">
+                <h3>New Delhi</h3>
+            </div>
+            <div class="box">
+                <img src="bangalore.jpg" alt="Bangalore">
+                <h3>Bangalore</h3>
+            </div>
+            <div class="box">
+                <img src="Mumbai.jpg" alt="Mumbai">
+                <h3>Mumbai</h3>
+            </div>
+            <div class="box">
+                <img src="Hydrabad.jpg" alt="Hydrabad">
+                <h3>Hydrabad</h3>
+            </div>
+            <!-- Add more trending destinations as needed -->
+        </section>
+
+        <section id="booking-form">
+            <h2>Book Your Stay</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone" required>
+                <input type="date" name="checkin" required>
+                <input type="date" name="checkout" required>
+                <select name="roomtype" required>
+                    <option value="">Select Room Type</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select>
+                <textarea name="requests" placeholder="Special Requests"></textarea>
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+</html>

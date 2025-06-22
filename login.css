@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('c.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 5% auto;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+}
+.container {
+    border: 2pxsolid white;
+    backdrop-filter: blur(10px);
+}
+label, input, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+
+a {
+    color: #ff6347;
+    text-decoration: none;
+}

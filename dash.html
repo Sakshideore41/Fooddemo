@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie's Paradise Dashboard</title>
+</head>
+<body>
+    <header>
+        
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .dashboard {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #6c757d;
+            padding: 20px;
+            color: white;
+        }
+        .sidebar h2 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .category-section, .brand-section, .billing-section {
+            margin-bottom: 20px;
+        }
+        .category-section h2, .brand-section h2, .billing-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .categories, .brands {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .category, .brand {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+            cursor: pointer;
+        }
+        .category img, .brand img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .category a, .brand a {
+            text-decoration: none;
+            color: #343a40;
+            font-weight: bold;
+        }
+        .billing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .billing-table th, .billing-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .billing-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Foodie's Paradise Dashboard</h1>
+        </div>
+        <div class="dashboard">
+            <div class="sidebar">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#brands">Top Brands</a></li>
+                    <li><a href="#billing">Billing</a></li>
+                    <li><a href="#payment">Payment</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div id="categories" class="category-section">
+                    <h2>Categories</h2>
+                    <div class="categories">
+                        <div class="category">
+                            <a href="desserts.html">
+                                <img src="dessert.jpg" alt="Desserts">
+                                <h3>Desserts</h3>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="burgers.html">
+                                <img src="burger.jpg" alt="Burgers">
+                                <h3>Burgers</h3>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="pizza.html">
+                                <img src="pizza.jpg" alt="Pizza">
+                                <h3>Pizza</h3>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="rolls.html">
+                                <img src="rolls.jpg" alt="Rolls">
+                                <h3>Rolls</h3>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="biryani.html">
+                                <img src="biryani.jpg" alt="Biryani">
+                                <h3>Biryani</h3>
+                            </a>
+                        </div>
+                        <div class="category">
+                            <a href="chicken.html">
+                                <img src="chicken.jpg" alt="Chicken">
+                                <h3>Chicken</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="brands" class="brand-section">
+                    <h2>Top Brands for You</h2>
+                    <div class="brands">
+                        <div class="brand">
+                            <a href="mcdonalds.html">
+                                <img src="mcdonalds.jpg" alt="McDonald's">
+                                <h3>McDonald's</h3>
+                            </a>
+                        </div>
+                        <div class="brand">
+                            <a href="dominos.html">
+                                <img src="dominos.jpg" alt="Domino's Pizza">
+                                <h3>Domino's Pizza</h3>
+                            </a>
+                        </div>
+                        <div class="brand">
+                            <a href="haldirams.html">
+                                <img src="haldirams.jpg" alt="Haldiram's">
+                                <h3>Haldiram's</h3>
+                            </a>
+                        </div>
+                        <div class="brand">
+                            <a href="burgerking.html">
+                                <img src="burgerking.jpg" alt="Burger King">
+                                <h3>Burger King</h3>
+                            </a>
+                        </div>
+                        <div class="brand">
+                            <a href="subway.html">
+                                <img src="subway.jpg" alt="Subway">
+                                <h3>Subway</h3>
+                            </a>
+                        </div>
+                        <div class="brand">
+                            <a href="kfc.html">
+                                <img src="kfc.jpg" alt="KFC">
+                                <h3>KFC</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="billing" class="billing-section">
+                    <h2>Billing Information</h2>
+                    <table class="billing-table">
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Subtotal</th>
+                        </tr>
+                        <tr>
+                            <td>Chocolate Cake</td>
+                            <td>1</td>
+                            <td>$18.99</td>
+                            <td>$18.99</td>
+                        </tr>
+                        <tr>
+                            <td>Cheeseburger</td>
+                            <td>2</td>
+                            <td>$9.99</td>
+                            <td>$19.98</td>
+                        </tr>
+                        <tr>
+                            <td>Veggie Pizza</td>
+                            <td>1</td>
+                            <td>$12.99</td>
+                            <td>$12.99</td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Total</th>
+                            <th>$51.96</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
